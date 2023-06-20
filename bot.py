@@ -1,13 +1,8 @@
-TOKEN = 'NTIyNzE5NjgyNjU5MDkwNDQz.GlCG6a.pk0dN8rKVXrbSZ-OSK7wgpkHrLqdl4xLLaW84g'
-#join clash url: https://discord.com/api/oauth2/authorize?client_id=522719682659090443&permissions=0&scope=bot%20applications.commands
-#join scape url: https://discord.com/api/oauth2/authorize?client_id=1112092623021277324&permissions=0&scope=bot%20applications.commands
-
-# This example requires the 'message_content' intent.
-
 import discord
 import game_manager
 from character_sheet import CharacterSheet
 from cards import generic_deck
+from TOKEN import TOKEN
 
 character_list = {}
 # test
@@ -33,7 +28,7 @@ intents.message_content = True
 
 client = MyClient(intents=intents)
 
-#client.run(TOKEN)
+client.run(TOKEN)
 gameManager = game_manager.GameManager()
 gameManager.new_game([character_list['1'][0], character_list['2'][0]])
 gameManager.new_game([character_list['3'][0], character_list['4'][0]])
